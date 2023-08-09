@@ -1,8 +1,12 @@
 [package]
-name = "oxidized_explorer"
+name = "OEx"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+eframe = "0.22.0"
+chrono = "0.4.26"
+
+[build-dependencies]
+winres = "0.1"

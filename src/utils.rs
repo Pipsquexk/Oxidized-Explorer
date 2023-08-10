@@ -1,4 +1,4 @@
-use std::{env, fs};
+use std::{env, fs, path::PathBuf};
 
 
 pub fn get_current_directory() -> std::io::Result<fs::ReadDir> {
@@ -7,6 +7,10 @@ pub fn get_current_directory() -> std::io::Result<fs::ReadDir> {
         panic!("Provided path is not a directory");
     }
     fs::read_dir(ret)
+}
+
+pub fn get_dir_from_file(path: &PathBuf) -> std::io::Result<fs::ReadDir> {
+    fs::read_dir(path)
 }
 
 pub fn list_cmd(path: &String)

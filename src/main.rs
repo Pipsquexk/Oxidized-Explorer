@@ -29,15 +29,9 @@ fn main() -> Result<(), eframe::Error> {
                 if hui.button("<<<").clicked() {
                     new_dir_path = prev_dirs[0].clone();
                 }
-                if hui.button("Copy").clicked() {
-
-                }
-                if hui.button("Delete").clicked() {
-
-                }
                 hui.text_edit_singleline(&mut search_str);
                 if hui.button("Search").clicked() {
-                    
+                    println!("Do search stuff!");
                 }
             });
             // cur_dir = utils::get_dir_from_file(std::path::PathBuf)
